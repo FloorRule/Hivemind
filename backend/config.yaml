@@ -1,0 +1,34 @@
+hub: {host: "0.0.0.0", port: 8000, broadcast_hz: 10.0, operator_push_hz: 5.0, record: false}
+dsp:
+  fs: 256
+  window_s: 4.0
+  tick_hz: 2.0
+  notch_hz: [50, 60]
+  bandpass_hz: [1, 40]
+  artifact_uv: 150.0
+  alpha_hz: [8, 12]
+  hbeta_hz: [18, 30]
+  baseline_s: 60.0
+  score_offset: 20.0
+  score_scale: 25.0
+thresholds:
+  warn_score: 65
+  warn_sustain_s: 8.0
+  intervene_score: 80
+  intervene_sustain_s: 10.0
+  recover_score: 45
+  recover_sustain_s: 6.0
+  release_score: 55
+  release_sustain_s: 15.0
+  recovery_grace_s: 15.0
+  signal_lost_s: 5.0
+  failover_delay_s: 2.0
+sources: {sim_stream_prefix: "SimMuse", muse_address: null, standby_all: true}
+db: {path: "data/ironmind.db"}
+scenario_dir: "backend/scenarios"
+operators:
+  - {id: operator_alpha_01, callsign: "ALPHA-01", source: muse, scenario: demo_pitch.yaml, seed: 101}
+  - {id: operator_bravo_02, callsign: "BRAVO-02", source: sim, scenario: demo_pitch.yaml, seed: 102}
+  - {id: operator_charlie_03, callsign: "CHARLIE-03", source: sim, scenario: demo_pitch.yaml, seed: 103}
+  - {id: operator_delta_04, callsign: "DELTA-04", source: sim, scenario: demo_pitch.yaml, seed: 104}
+  - {id: operator_echo_05, callsign: "ECHO-05", source: sim, scenario: demo_pitch.yaml, seed: 105}

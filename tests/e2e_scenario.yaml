@@ -1,0 +1,11 @@
+operator_alpha_01:
+  baseline: {duration: 3, stress: 0.10}
+  events:
+    - {t: 5,  action: ramp, to: 0.85, over: 2}
+    - {t: 7,  action: hold, value: 0.85}
+    - {t: 25, action: ramp, to: 0.12, over: 4}
+operator_bravo_02:
+  baseline: {duration: 3, stress: 0.12}
+  loop:
+    - {action: hold, value: 0.15, duration: 30}
+    - {action: ramp, to: 0.40, over: 10}

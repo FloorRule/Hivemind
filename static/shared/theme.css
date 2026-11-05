@@ -1,0 +1,17 @@
+:root { --bg:#0b1220; --panel:#121a2e; --ink:#e6edf7; --dim:#8aa0c2; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink);
+  font-family: ui-sans-serif, system-ui, sans-serif; margin: 0; }
+.panel { background: var(--panel); border: 1px solid #223052;
+  border-radius: 10px; padding: 12px; }
+.dim { color: var(--dim); }
+.grid { display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.badge { padding: 2px 10px; border-radius: 999px; font-size: 12px; }
+.badge.baseline { background:#334155; } .badge.nominal { background:#14532d; }
+.badge.warning { background:#713f12; } .badge.intervention { background:#7f1d1d; }
+.badge.recovery { background:#164e63; } .badge.signal_lost { background:#3f3f46; }
+button { background:#1d4ed8; color:white; border:0; border-radius:6px;
+  padding:6px 10px; cursor:pointer; }
+button:hover { filter: brightness(1.15); }
+.amber { outline: 2px solid #f59e0b; }

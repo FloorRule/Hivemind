@@ -1,0 +1,30 @@
+operator_alpha_01:
+  baseline: {duration: 45, stress: 0.10}
+  events:
+    - {t: 50,  action: ramp, to: 0.85, over: 25}
+    - {t: 75,  action: hold, value: 0.85}
+    - {t: 130, action: ramp, to: 0.12, over: 25}
+operator_bravo_02:
+  baseline: {duration: 45, stress: 0.12}
+  loop:
+    - {action: hold, value: 0.20, duration: 30}
+    - {action: ramp, to: 0.60, over: 25}
+    - {action: hold, value: 0.60, duration: 12}
+    - {action: ramp, to: 0.15, over: 18}
+operator_charlie_03:
+  baseline: {duration: 45, stress: 0.10}
+  loop:
+    - {action: hold, value: 0.30, duration: 45}
+    - {action: ramp, to: 0.45, over: 30}
+operator_delta_04:
+  baseline: {duration: 30, stress: 0.15}
+  loop:
+    - {action: ramp, to: 0.75, over: 20}
+    - {action: hold, value: 0.75, duration: 10}
+    - {action: ramp, to: 0.15, over: 25}
+    - {action: hold, value: 0.15, duration: 30}
+operator_echo_05:
+  baseline: {duration: 45, stress: 0.10}
+  loop:
+    - {action: hold, value: 0.12, duration: 80}
+    - {action: ramp, to: 0.30, over: 20}

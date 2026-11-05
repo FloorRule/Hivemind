@@ -1,0 +1,14 @@
+hub: {host: "127.0.0.1", port: 8123, broadcast_hz: 10.0, operator_push_hz: 5.0, record: false}
+dsp: {fs: 256, window_s: 2.0, tick_hz: 4.0, baseline_s: 3.0}
+thresholds:
+  warn_sustain_s: 1.0
+  intervene_sustain_s: 1.0
+  recover_sustain_s: 0.5
+  release_sustain_s: 1.0
+  recovery_grace_s: 1.0
+  signal_lost_s: 5.0
+  failover_delay_s: 2.0
+db: {path: "data/e2e.db"}
+operators:
+  - {id: operator_alpha_01, callsign: "ALPHA-01", source: sim, scenario: e2e_scenario.yaml, seed: 901}
+  - {id: operator_bravo_02, callsign: "BRAVO-02", source: sim, scenario: e2e_scenario.yaml, seed: 902}

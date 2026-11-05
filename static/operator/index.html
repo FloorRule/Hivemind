@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>IronMind Operator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/shared/theme.css">
+<link rel="modulepreload" href="game.js">
+<style>
+  #toast { position:fixed; top:0; left:0; right:0; background:#b45309;
+    padding:16px; text-align:center; display:none; font-weight:700; }
+  #game { display:none; }
+</style></head><body>
+<div class="panel" style="margin:12px">
+  <h1 id="callsign" style="margin:0;font-size:20px">OPERATOR</h1>
+  <p id="state" class="dim">connecting…</p>
+  <p style="font-size:48px;font-weight:700" id="score">—</p>
+  <p class="dim" id="hint">Wear the headset. Breathe. The system calibrates
+    for 60 seconds.</p>
+</div>
+<div id="toast">Elevated stress detected — prepare for focus exercise</div>
+<div id="game"><div id="gamehud" class="dim"
+  style="position:fixed;top:8px;left:12px;z-index:10">Follow the orb.
+  Breathe in as it grows, out as it shrinks.</div></div>
+<script src="/static/vendor/p5.min.js" onerror="this.remove()"></script>
+<script type="module" src="app.js"></script>
+</body></html>

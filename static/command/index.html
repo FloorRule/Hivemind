@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>IronMind Command</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/static/vendor/tailwind.js" onerror="this.remove()"></script>
+<link rel="stylesheet" href="/static/shared/theme.css">
+<style>
+  .score { font-size: 44px; font-weight: 800; line-height: 1; }
+  #alertlog { max-height: 180px; overflow-y: auto; }
+  #alertlog div { padding: 2px 0; border-bottom: 1px solid #223052;
+    font-size: 13px; }
+</style></head><body>
+<div class="panel flex items-center gap-4" style="margin:12px">
+  <h1 style="margin:0;font-size:18px;font-weight:700">
+    IronMind Guardian — Command Center</h1>
+  <span id="conn" class="dim">connecting…</span>
+  <span id="simbadge" class="badge warning" style="display:none">SIM MODE</span>
+  <span class="dim" style="margin-left:auto">S = sim toggle ·
+    buttons steer operators</span>
+</div>
+<div id="grid" class="grid" style="margin:12px"></div>
+<div class="panel" style="margin:12px">
+  <b>Alert Log</b>
+  <div id="alertlog"></div>
+</div>
+<script type="module" src="app.js"></script>
+</body></html>
